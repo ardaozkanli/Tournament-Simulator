@@ -1,5 +1,5 @@
 import Navbar from "./Navbar"
-import Banner from "./Banner";
+
 import GroupStage from "./GroupStage";
 import ThirdPlace from "./ThirdPlace";
 import PlayOff from "./PlayOff";
@@ -10,7 +10,7 @@ function App() {
   return (
     <>
       <Navbar />
-      <Banner />
+    
       <GroupStage />
       <ThirdPlace />
       <PlayOff />
