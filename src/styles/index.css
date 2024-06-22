@@ -4,3 +4,13 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
 }
+h1 {
+  color: white;
+  font-size: 80px;
+}
+.container {
+  margin: 50px;
+}
+h2 {
+  font-size: 30px;
+}

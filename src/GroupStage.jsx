@@ -1,19 +1,40 @@
 import React, { useState } from "react";
 import flagsData from "./flags/country-flag.json";
+import { DndProvider } from "react-dnd";
+import { HTML5Backend } from "react-dnd-html5-backend";
+import GroupCard from "./components/GroupCard";
 
 function GroupStage() {
-  const [countrys, setCountrys] = useState(flagsData);
+  const [countries, setCountries] = useState(flagsData);
 
   const chunkSize = 4;
-  const groups = {};
+  const groups = [];
 
-  for (let i = 0; i < countrys.length; i += chunkSize) {
-    const groupName = `Group ${String.fromCharCode(65 + i / chunkSize)}`; 
-    groups[groupName] = countrys.slice(i, i + chunkSize);
+  for (let i = 0; i < countries.length; i += chunkSize) {
+    const groupName = `Group ${String.fromCharCode(65 + i / chunkSize)}`;
+    groups.push({
+      name: groupName,
+      countries: countries.slice(i, i + chunkSize),
+    });
   }
 
-  console.log(groups); 
-  return <div>Group Stage</div>;
+  return (
+    <DndProvider backend={HTML5Backend}>
+      <>
+        <h1>GROUP STAGE</h1>
+        <hr />
+        <div className="group-container">
+          {groups.map((group, index) => (
+            <GroupCard
+              key={index}
+              groupName={group.name}
+              countries={group.countries}
+            />
+          ))}
+        </div>
+      </>
+    </DndProvider>
+  );
 }
 
 export default GroupStage;

@@ -1,0 +1,63 @@
+.group-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center; /* Center the groups horizontally */
+}
+
+.group-card {
+  border: 1px solid white;
+  flex: 1 1 calc(33.33% - 40px); /* 33.33% width minus gap */
+  box-sizing: border-box;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: white;
+  text-align: center;
+  margin: 10px;
+}
+
+.group-card-title {
+  margin-bottom: 10px;
+}
+
+.group-card-flags ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 20px;
+}
+.group-card-flags ul li {
+  border: 1px solid #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.group-card-flag {
+  width: 50px;
+  height: 35px;
+}
+
+.group-card-slots {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+.droppable-slot {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  margin-top: 10px;
+}

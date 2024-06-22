@@ -1,4 +1,4 @@
-import Navbar from "./Navbar"
+import Navbar from "./Navbar";
 
 import GroupStage from "./GroupStage";
 import ThirdPlace from "./ThirdPlace";
@@ -10,15 +10,16 @@ function App() {
   return (
     <>
       <Navbar />
-    
-      <GroupStage />
-      <ThirdPlace />
-      <PlayOff />
-      <QuaterFinal />
-      <SemiFinal />
-      <Final />
+      <div className="container">
+        <GroupStage />
+        <ThirdPlace />
+        <PlayOff />
+        <QuaterFinal />
+        <SemiFinal />
+        <Final />
+      </div>
     </>
   );
 }
 
-export default App
+export default App;
